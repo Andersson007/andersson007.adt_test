@@ -6,4 +6,4 @@
 - name: Assert
   ansible.builtin.assert:
     that:
-    - result is succeeded
+      - result is succeeded
