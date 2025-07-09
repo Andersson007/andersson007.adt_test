@@ -1,0 +1,9 @@
+- name: Display a hello message
+  andersson007.adt_test.dummy:
+    name: test
+  register: result
+
+- name: Assert
+  ansible.builtin.assert:
+    that:
+    - result is succeeded
