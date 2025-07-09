@@ -1,4 +1,6 @@
-"""A hello-world filter plugin in andersson007.adt_test."""
+# sample_filter.py - A custom filter plugin for Ansible.
+# Author: Your Name
+# License: GPL-3.0-or-later
 
 from __future__ import absolute_import, annotations, division, print_function
 
@@ -13,10 +15,10 @@ if TYPE_CHECKING:
 
 
 DOCUMENTATION = """
-    name: hello_world
-    author: Andersson007 Adt_test
+    name: sample_filter
+    author: Your Name
     version_added: "1.0.0"
-    short_description: Demo filter plugin that returns a Hello message.
+    short_description: A custom filter plugin for Ansible.
     description:
       - This is a demo filter plugin designed to return Hello message.
     options:
@@ -26,15 +28,15 @@ DOCUMENTATION = """
 """
 
 EXAMPLES = """
-# hello_world filter example
+# sample_filter filter example
 
 - name: Display a hello message
   ansible.builtin.debug:
-    msg: "{{ 'ansible-creator' | andersson007.adt_test.hello_world }}"
+    msg: "{{ 'ansible-creator' | sample_filter }}"
 """
 
 
-def _hello_world(name: str) -> str:
+def _sample_filter(name: str) -> str:
     """Returns Hello message.
 
     Args:
@@ -49,10 +51,10 @@ def _hello_world(name: str) -> str:
 class FilterModule:
     """filter plugin."""
 
-    def filters(self: FilterModule) -> dict[str, Callable[[str], str]]:
+    def filters(self) -> dict[str, Callable[[str], str]]:
         """Map filter plugin names to their functions.
 
         Returns:
             dict: The filter plugin functions.
         """
-        return {"hello_world": _hello_world}
+        return {"sample_filter": _sample_filter}

@@ -1,4 +1,4 @@
-Andersson007.Adt_test Run Role
+andersson007.adt_test run Role
 ========================
 
 A brief description of the role goes here.
@@ -43,6 +43,38 @@ Another way to consume this role would be:
         name: andersson007.adt_test.run
       vars:
         run_x: 42
+```
+
+Role Idempotency
+----------------
+
+Designation of the role as idempotent (True/False)
+
+Role Atomicity
+----------------
+
+Designation of the role as atomic if applicable (True/False)
+
+Roll-back capabilities
+----------------------
+
+Define the roll-back capabilities of the role
+
+Argument Specification
+----------------------
+
+Including an example of how to add an argument Specification file that validates the arguments provided to the role.
+
+```
+argument_specs:
+  main:
+    short_description: Role description.
+    options:
+      string_arg1:
+        description: string argument description.
+        type: "str"
+        default: "x"
+        choices: ["x", "y"]
 ```
 
 License

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # pylint: disable=E0401
-# dummy.py - A custom module plugin for Ansible.
+# sample_module.py - A custom module plugin for Ansible.
 # Author: Your Name (@username)
 # License: GPL-3.0-or-later
 # GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
@@ -9,7 +9,7 @@ from __future__ import absolute_import, annotations, division, print_function
 
 
 DOCUMENTATION = """
-    module: dummy
+    module: sample_module
     author: Your Name (@username)
     version_added: "1.0.0"
     short_description: A custom module plugin for Ansible.
@@ -22,11 +22,11 @@ DOCUMENTATION = """
 """
 
 EXAMPLES = """
-# dummy module example
+# sample_module module example
 
 - name: Display a hello message
   ansible.builtin.debug:
-    msg: "{{ 'ansible-creator' | dummy }}"
+    msg: "{{ 'ansible-creator' | sample_module }}"
 """
 
 

@@ -1,10 +1,10 @@
 schemaVersion: 2.2.2
 metadata:
-  name: andersson007.adt_test-8d863ee5
+  name: andersson007.adt_test-275c5fa2
 components:
   - name: tooling-container
     container:
-      image: ghcr.io/ansible/ansible-workspace-env-reference:latest
+      image: ghcr.io/ansible/ansible-devspaces:latest
       memoryRequest: 256M
       memoryLimit: 6Gi
       cpuRequest: 250m
