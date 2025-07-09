@@ -1,3 +1,4 @@
+# Just a comment
 - name: Display a hello message
   andersson007.adt_test.dummy:
     name: test
